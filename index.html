@@ -1,27 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Ghetto Panel</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARZFUN Leaders</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Меню</h2>
-    <ul>
-      <li><a href="#">Игровой профиль</a></li>
-      <li><a href="#">Действующие лидеры</a></li>
-      <li><a href="#">Профили</a></li>
-      <li><a href="#">След. администрация</a></li>
-      <li><a href="#">О сайте</a></li>
-    </ul>
-  </div>
-  
-  <div class="main-content">
-    <h1>Добро пожаловать в Ghetto Panel</h1>
-    <div id="profile"></div>
-  </div>
 
-  <script src="script.js"></script>
+    <aside class="sidebar">
+        <div class="logo">ARZFUN</div>
+        <a href="#profile-page" class="nav-link active">Игровой профиль</a>
+        <a href="#leaders-page" class="nav-link">Действительные лидеры</a>
+        <a href="#profiles-page" class="nav-link">Профили</a>
+        <a href="#administration-page" class="nav-link">След. администрация</a>
+        <a href="#about-page" class="nav-link">О сайте</a>
+    </aside>
+
+    <main class="content">
+        <section id="profile-page" class="page-section active">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://i.imgur.com/your-banner-here.png" alt="User Banner" class="profile-banner">
+                    <div class="profile-info">
+                        <div class="nickname">Patsoha</div>
+                        <div class="role">Основатель</div>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Варнов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">123</div>
+                        <div class="stat-label">Выдано варнов</div>
+                    </div>
+                </div>
+                <div class="profile-log">
+                    <h3>Лог действий</h3>
+                    <div class="log-entry">
+                        <span class="log-date">[17.09.2025]</span>
+                        <span class="log-text">Выдан варн игроку John_Doe. Причина: Неактив.</span>
+                    </div>
+                    <div class="log-entry">
+                        <span class="log-date">[16.09.2025]</span>
+                        <span class="log-text">Снят варн с игрока Jane_Doe.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaders-page" class="page-section">
+            <h2>Действительные лидеры</h2>
+            <div class="profiles-grid">
+                <div class="leader-card">
+                    <img src="https://i.imgur.com/example-leader-banner.png" alt="Leader Banner" class="leader-banner">
+                    <div class="leader-info">
+                        <div class="leader-nickname">Arsen_Grove</div>
+                        <div class="leader-org">Grove Street</div>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <img src="https://i.imgur.com/example-leader-banner2.png" alt="Leader Banner" class="leader-banner">
+                    <div class="leader-info">
+                        <div class="leader-nickname">Arsen228_Ballas</div>
+                        <div class="leader-org">Ballas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="profiles-page" class="page-section">
+            <h2>Все профили</h2>
+            <p>Здесь будут отображаться все профили, зарегистрированные на сайте.</p>
+        </section>
+
+        <section id="administration-page" class="page-section">
+            <h2>Следящая администрация</h2>
+            <p>Здесь будут профили Следящих, ЗГС и ГС гетто.</p>
+        </section>
+
+        <section id="about-page" class="page-section">
+            <h2>О сайте</h2>
+            <div class="about-info">
+                <p>Версия сайта: <span class="version">1.0</span></p>
+                <div class="developers">
+                    <h3>Разработчики:</h3>
+                    <ul>
+                        <li><span class="red-name">Patsoha</span> (Основатель)</li>
+                        <li><span class="red-name">dmk</span> (Разработчик сервера ARZFUN)</li>
+                        <li><span class="red-name">Kercheck_Percheck</span> (Разработчик ARZFUN Leaders)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

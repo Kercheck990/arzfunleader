@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Добавить объявление</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Добавить объявление</h1></header>
+  <main>
+    <form id="addForm">
+      <input type="text" id="title" placeholder="Заголовок" required>
+      <input type="number" id="price" placeholder="Цена" required>
+      <input type="url" id="image" placeholder="URL картинки">
+      <textarea id="desc" placeholder="Описание"></textarea>
+      <button type="submit">Сохранить</button>
+    </form>
+  </main>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("addForm").addEventListener("submit", e => {
+      e.preventDefault();
+      let listings = JSON.parse(localStorage.getItem("listings")) || [];
+      listings.push({
+        title: title.value,
+        price: price.value,
+        image: image.value,
+        desc: desc.value
+      });
+      localStorage.setItem("listings", JSON.stringify(listings));
+      window.location = "index.html";
+    });
+  </script>
+</body>
+</html>
